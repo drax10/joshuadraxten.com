@@ -23,6 +23,26 @@ input {
   width: calc(100% - 40px);
 }
 
+/* Printing */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+}
+@media screen {
+  .print-canvas {
+    background: #fff;
+    margin: 40px auto;
+    box-sizing: border-box;
+    width: 8.5in;
+    height: 11in;
+    background-color: white;
+    box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Links */
+
 a {
   color: #000;
   text-decoration: none;
@@ -261,7 +281,7 @@ header {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-@media screen and (max-width: 1060px) {
+@media (max-width: 1060px) {
   .content img {
     margin: 0 2px 40px;
     width: 100%;
@@ -538,7 +558,7 @@ figcaption {
   }
 }
 
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .modal {
     width: 600px;
     height: 300px;
@@ -566,13 +586,13 @@ figcaption {
 
 /* Media Queries */
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
   .schedule-cta p,
   .schedule-cta p * {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .schedule-cta .no-wrap {
     white-space: break-spaces;
   }
@@ -582,7 +602,7 @@ figcaption {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
   header h1 {
     font-size: 2.4em;
     margin-bottom: 8px;
@@ -600,7 +620,7 @@ figcaption {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   header > a {
     padding: 0 12px;
   }
