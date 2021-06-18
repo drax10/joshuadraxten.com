@@ -10,7 +10,7 @@ social:
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		{%- set subtitle %}{{ newstitle or searchTitle or relatedTitle or tiptitle or title }}{% endset %}
-		{%- set subtitleText %}{% if subtitle %}{{ subtitle }}{% else %}we build things on the web{% endif %} | ovco{% endset %}
+		{%- set subtitleText %}{% if subtitle %}{{ subtitle }}{% else %}i build things on the web{% endif %} | Joshua Draxten{% endset %}
 		<title>{{ subtitleText | safe | parsehtmlentities }}</title>
 		<meta name="title" content="{{ subtitleText }}">
 		<meta name="description" content="{{ subtitleText }}">
@@ -18,8 +18,8 @@ social:
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://ovco.io/">
-		<meta property="og:site_name" content="ovco">
+		<meta property="og:url" content="https://joshuadraxten.com/">
+		<meta property="og:site_name" content="joshuadraxten">
 		<meta property="og:locale" content="en_US">
 		<meta property="og:title" content="{{ subtitle }}">
 		<meta property="og:description" content="{{ social.description }}">
@@ -31,7 +31,7 @@ social:
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image">
 		<meta property="twitter:creator" content="@joshuadraxten">
-		<meta property="twitter:url" content="https://ovco.io/">
+		<meta property="twitter:url" content="https://joshuadraxten.com/">
 		<meta property="twitter:title" content="{{ subtitleText }}">
 		<meta property="twitter:description" content="{{ social.description }}">
 		{# <meta property="twitter:image" content="{{ social.imgsrc }}">
