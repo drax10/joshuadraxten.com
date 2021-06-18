@@ -14,7 +14,6 @@
 html,
 body {
   margin: 0;
-  /* background: #f3f3f3; */
 }
 input {
   margin: 6px;
@@ -22,6 +21,27 @@ input {
   height: 2.5em;
   padding: 0 12px;
   width: calc(100% - 40px);
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+a::after {
+  content: "";
+  width: calc(100% + 4px);
+  height: 1px;
+  left: -2px;
+  bottom: -2px;
+  position: absolute;
+  background: #000;
+}
+a:hover {
+  color: #668db3;
+}
+a:hover::after {
+  background: #668db3;
 }
 
 /* Header */
@@ -62,6 +82,9 @@ header > a {
   display: flex;
   align-items: center;
 }
+header > a::after {
+  content: none;
+}
 .metadata {
   color: #fff;
   width: 100%;
@@ -100,39 +123,72 @@ article[data-index$="9"] header {
 }
 
 /* 
-  Generate pallates here: https://coolors.co/1e1e24-b84b0c-123b7d-06bee1-04724d-c44536-a3320b 
+  Generate pallates here: https://coolors.co/177e89-084c61-db3a34-ffbb34-323031
   pass in the following funtcion to generate the css
 */
 /* 
   function printCSSForScheme( colorArr ) {
     let out='';
     for (i=0; i<colorArr.length; i++) {
-      out += `article[data-index="${i}"] header, article:nth-of-type(${colorArr.length}n-${colorArr.length-i-1}) header { background: #${colorArr[i]}; }\n`
+        out += `article[data-index="${i}"] header, article:nth-of-type(${colorArr.length}n-${colorArr.length - i - 1}) header,` +
+            `article[data-index="${i}"] a:hover::after, article:nth-of-type(${colorArr.length}n-${colorArr.length - i - 1}) a:hover::after {background: #${colorArr[i]};}` +
+            `article[data-index="${i}"] a:hover, article:nth-of-type(${colorArr.length}n-${colorArr.length - i - 1}) a:hover {color: #${colorArr[i]};}`
     }
     return out;
   }
 */
 article[data-index="0"] header,
-article:nth-of-type(5n-4) header {
+article:nth-of-type(5n-4) header,
+article[data-index="0"] a:hover::after,
+article:nth-of-type(5n-4) a:hover::after {
   background: #177e89;
 }
+article[data-index="0"] a:hover,
+article:nth-of-type(5n-4) a:hover {
+  color: #177e89;
+}
 article[data-index="1"] header,
-article:nth-of-type(5n-3) header {
+article:nth-of-type(5n-3) header,
+article[data-index="1"] a:hover::after,
+article:nth-of-type(5n-3) a:hover::after {
   background: #084c61;
 }
+article[data-index="1"] a:hover,
+article:nth-of-type(5n-3) a:hover {
+  color: #084c61;
+}
 article[data-index="2"] header,
-article:nth-of-type(5n-2) header {
+article:nth-of-type(5n-2) header,
+article[data-index="2"] a:hover::after,
+article:nth-of-type(5n-2) a:hover::after {
   background: #db3a34;
 }
+article[data-index="2"] a:hover,
+article:nth-of-type(5n-2) a:hover {
+  color: #db3a34;
+}
 article[data-index="3"] header,
-article:nth-of-type(5n-1) header {
+article:nth-of-type(5n-1) header,
+article[data-index="3"] a:hover::after,
+article:nth-of-type(5n-1) a:hover::after {
   background: #ffbb34;
 }
+article[data-index="3"] a:hover,
+article:nth-of-type(5n-1) a:hover {
+  color: #ffbb34;
+}
 article[data-index="4"] header,
-article:nth-of-type(5n-0) header {
+article:nth-of-type(5n-0) header,
+article[data-index="4"] a:hover::after,
+article:nth-of-type(5n-0) a:hover::after {
   background: #323031;
 }
+article[data-index="4"] a:hover,
+article:nth-of-type(5n-0) a:hover {
+  color: #323031;
+}
 
+/* Header */
 header {
   transition: 0.4s all;
 }
