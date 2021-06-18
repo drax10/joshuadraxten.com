@@ -1,0 +1,9 @@
+---
+pagination:
+    data: collections.page
+    size: 1
+    alias: post
+permalink: "post-data/{{ post.data.title | slug }}/"
+---
+
+{{ post.templateContent | safe }}

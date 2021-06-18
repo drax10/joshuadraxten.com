@@ -1,0 +1,33 @@
+---
+layout: layouts/base
+---
+{# 
+    Find out what index the post is so that it retains the
+    same color as it is on the homepage
+#}
+{%- set pageindex = 0 -%}
+{% set continue = false %}
+{%- for page in collections.page -%}
+    {%- if title != page.data.title and not continue -%}
+        {% set pageindex = pageindex + 1 %}
+    {% else %}
+        {% set continue = true %}
+    {%- endif -%}
+{%- endfor -%}
+{%- for post in collections.post | reverse -%}
+    {%- if title != post.data.title and not continue -%}
+        {% set pageindex = pageindex + 1 %}
+    {% else %}
+        {% set continue = true %}
+    {%- endif -%}
+{%- endfor -%}
+
+<article class="single-post" data-index="{{pageindex}}">
+    {%- set goback = true -%}
+    
+    {% include "components/article-header.njk" %}
+    <div class="content-fadein">
+        <div class="content">{{ content | safe }}</div>
+        {% include "components/footer.njk" %}
+    </div>
+</article>

@@ -1,0 +1,551 @@
+:root {
+  --header-title-font: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --body-font: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --title-font: "Roboto Mono", monospace;
+  --content-max-width: 1200px;
+  /* 160px more than content max width */
+  --image-max-width: 1360px;
+}
+* {
+  font-family: var(--body-font);
+}
+html,
+body {
+  margin: 0;
+  /* background: #f3f3f3; */
+}
+input {
+  margin: 6px;
+  font-size: 18px;
+  height: 2.5em;
+  padding: 0 12px;
+  width: calc(100% - 40px);
+}
+
+/* Header */
+
+header {
+  position: relative;
+}
+
+header h1 {
+  line-height: 1em;
+  margin-bottom: 16px;
+  margin: 0;
+  font-size: 62px;
+  color: #f3f3f3;
+  font-family: var(--header-title-font);
+}
+header h2 {
+  margin: 0;
+  font-weight: 200;
+  color: #f3f3f3;
+  font-family: var(--title-font);
+  line-height: 1.4em;
+  font-size: 38px;
+}
+
+header > a {
+  text-decoration: none;
+
+  display: block;
+  min-height: 40vh;
+  padding: 0 100px;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  display: flex;
+  align-items: center;
+}
+.metadata {
+  color: #fff;
+  width: 100%;
+  opacity: 0;
+  display: block;
+  margin-top: -2em;
+  transition: all 0.8s;
+}
+.single-post .metadata {
+  opacity: 1;
+  margin-top: 0;
+}
+
+code {
+  font-family: var(--title-font);
+  background: rgba(255, 255, 0, 0.5);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font);
+}
+
+/* Every other row is aligned to the right */
+article:nth-of-type(2n) header,
+article[data-index$="1"] header,
+article[data-index$="3"] header,
+article[data-index$="5"] header,
+article[data-index$="7"] header,
+article[data-index$="9"] header {
+  text-align: right;
+}
+
+/* 
+  Generate pallates here: https://coolors.co/1e1e24-b84b0c-123b7d-06bee1-04724d-c44536-a3320b 
+  pass in the following funtcion to generate the css
+*/
+/* 
+  function printCSSForScheme( colorArr ) {
+    let out='';
+    for (i=0; i<colorArr.length; i++) {
+      out += `article[data-index="${i}"] header, article:nth-of-type(${colorArr.length}n-${colorArr.length-i-1}) header { background: #${colorArr[i]}; }\n`
+    }
+    return out;
+  }
+*/
+article[data-index="0"] header,
+article:nth-of-type(5n-4) header {
+  background: #177e89;
+}
+article[data-index="1"] header,
+article:nth-of-type(5n-3) header {
+  background: #084c61;
+}
+article[data-index="2"] header,
+article:nth-of-type(5n-2) header {
+  background: #db3a34;
+}
+article[data-index="3"] header,
+article:nth-of-type(5n-1) header {
+  background: #ffbb34;
+}
+article[data-index="4"] header,
+article:nth-of-type(5n-0) header {
+  background: #323031;
+}
+
+header {
+  transition: 0.4s all;
+}
+.single-post header {
+  margin-top: 0.5vw;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  /* Offset for header shrinking slightly */
+  transform: scale(0.99);
+}
+
+.posts header:hover {
+  opacity: 0.95;
+}
+
+/* animations */
+.single-post article:not(.header-leave) {
+  z-index: 1000000 !important;
+}
+
+@keyframes contentFadein {
+  from {
+    opacity: 0;
+    height: 0;
+    margin: 0 auto;
+  }
+  to {
+    opacity: 1;
+    height: auto;
+    margin: 40 auto;
+  }
+}
+
+.content {
+  max-width: var(--content-max-width);
+  line-height: 2em;
+  font-size: 18px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.content.animate {
+  -webkit-animation: contentFadein 0.8s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: contentFadein 0.8s; /* Firefox < 16 */
+  -ms-animation: contentFadein 0.8s; /* Internet Explorer */
+  -o-animation: contentFadein 0.8s; /* Opera < 12.1 */
+  animation: contentFadein 0.8s;
+}
+.content p,
+.content h2,
+.content h3,
+.content ul,
+.content ol {
+  max-width: 900px;
+  margin: 1em auto;
+}
+
+.content ul,
+.content ol {
+  padding-left: 40px !important;
+  line-height: 1em Im !important;
+}
+
+.content img {
+  display: block;
+  width: calc(100% + 160px);
+  max-width: 100vw;
+  margin-left: -80px;
+  margin-bottom: 80px;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media screen and (max-width: 1060px) {
+  .content img {
+    margin: 0 2px 40px;
+    width: 100%;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    margin-bottom: -40vh;
+    margin-left: 100%;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 0;
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.header-enter {
+  -webkit-animation: slideIn 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: slideIn 1s; /* Firefox < 16 */
+  -ms-animation: slideIn 1s; /* Internet Explorer */
+  -o-animation: slideIn 1s; /* Opera < 12.1 */
+  animation: slideIn 1s;
+  width: 100vw;
+  height: 40vh;
+}
+
+.header-leave {
+  clear: both;
+  /* z-index: -1; */
+  opacity: 0.01;
+  margin-left: 100%;
+  margin-bottom: -40vh;
+  transition: all 800ms ease-in;
+}
+.header-leave * {
+  color: rgba(0, 0, 0, 0);
+  transition: all 500ms ease-in;
+}
+
+.back-button {
+  position: absolute;
+  font-family: var(--title-font);
+  top: 24px;
+  left: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-animation: contentFadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: contentFadein 1s; /* Firefox < 16 */
+  -ms-animation: contentFadein 1s; /* Internet Explorer */
+  -o-animation: contentFadein 1s; /* Opera < 12.1 */
+  animation: contentFadein 1s;
+}
+.back-button::after {
+  content: "back";
+  vertical-align: middle;
+  font-size: 22px;
+}
+.back-button svg {
+  vertical-align: middle;
+}
+.hidden {
+  display: none;
+}
+
+figure {
+  margin: 40px 0 80px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+figure:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+figure img {
+  margin: 0 !important;
+}
+
+figcaption {
+  position: absolute;
+  font-size: 24px;
+  line-height: 1.4em;
+  color: #000;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  display: block;
+  padding: 80px 12px;
+  background: #f3f3f3;
+}
+
+.footer p,
+.footer p * {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: var(--title-font);
+}
+
+/* Modals  */
+@-webkit-keyframes slide-in {
+  0% {
+    opacity: 0.4;
+    top: 100px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes slide-in {
+  0% {
+    opacity: 0.4;
+    top: 100px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0.4;
+    top: 100px;
+  }
+}
+@keyframes slide-out {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0.4;
+    top: 100px;
+  }
+}
+
+.modal-backdrop {
+  top: 0;
+  background: rgba(0, 0, 0, 0.32);
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.modal {
+  position: fixed;
+  overflow: auto;
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: slide-in 0.2s forwards ease-in;
+  animation: slide-in 0.2s forwards ease-in;
+  border-radius: 4px;
+}
+.modal.closing {
+  -webkit-animation: slide-out 0.2s forwards ease-in;
+  animation: slide-out 0.2s forwards ease-in;
+}
+
+.close-modal::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 22px;
+  height: 22px;
+  background: #000;
+  z-index: -1;
+}
+.close-modal {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  -webkit-animation: slide-in 0.2s forwards ease-in;
+  animation: slide-in 0.2s forwards ease-in;
+  z-index: 1;
+  padding: 20px;
+}
+.modal.closing .close-modal {
+  -webkit-animation: slide-out 0.2s forwards ease-in;
+  animation: slide-out 0.2s forwards ease-in;
+}
+.close-modal svg {
+  fill: #e2e2e2;
+  margin: -4px;
+  height: 30px;
+}
+
+#schedule-meeting.success {
+  text-align: center;
+  top: 75px;
+}
+#schedule-meeting.success h2 {
+  font-size: 40px;
+}
+
+.modal .modal-title {
+  background: #333;
+  color: #fff;
+  display: block;
+  font-family: var(--title-font);
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2em;
+  padding: 22px 40px 22px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.modal-content {
+  padding: 0 12px;
+  position: relative;
+  top: calc(50% - 35px);
+  transform: translateY(-50%);
+}
+
+@-webkit-keyframes slide-in-desktop {
+  0% {
+    opacity: 0.4;
+    top: calc(50% - 200px);
+  }
+  100% {
+    opacity: 1;
+    top: calc(50% - 300px);
+  }
+}
+@keyframes slide-in-desktop {
+  0% {
+    opacity: 0.4;
+    top: calc(50% - 200px);
+  }
+  100% {
+    opacity: 1;
+    top: calc(50% - 300px);
+  }
+}
+
+@-webkit-keyframes slide-out-desktop {
+  0% {
+    opacity: 1;
+    top: calc(50% - 300px);
+  }
+  100% {
+    opacity: 0.4;
+    top: calc(50% - 200px);
+  }
+}
+@keyframes slide-out-desktop {
+  0% {
+    opacity: 1;
+    top: calc(50% - 300px);
+  }
+  100% {
+    opacity: 0.4;
+    top: calc(50% - 200px);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .modal {
+    width: 600px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(50%);
+    -webkit-animation: slide-in-desktop 0.2s forwards ease-in;
+    animation: slide-in-desktop 0.2s forwards ease-in;
+  }
+  .modal.closing {
+    -webkit-animation: slide-out-desktop 0.2s forwards ease-in;
+    animation: slide-out-desktop 0.2s forwards ease-in;
+  }
+  .close-modal {
+    -webkit-animation: slide-in-desktop 0.2s forwards ease-in;
+    animation: slide-in-desktop 0.2s forwards ease-in;
+    right: calc(50% - 300px);
+    margin-top: 150px;
+  }
+  .modal.closing .close-modal {
+    -webkit-animation: slide-out-desktop 0.2s forwards ease-in;
+    animation: slide-out-desktop 0.2s forwards ease-in;
+  }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 900px) {
+  .schedule-cta p,
+  .schedule-cta p * {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .schedule-cta .no-wrap {
+    white-space: break-spaces;
+  }
+  button {
+    padding: 14px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header h1 {
+    font-size: 2.4em;
+    margin-bottom: 8px;
+  }
+  header h2 {
+    font-size: 1.4em;
+    line-height: 1em;
+  }
+  figcaption {
+    font-size: 18px;
+  }
+  .back-button {
+    top: 24px;
+    left: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header > a {
+    padding: 0 12px;
+  }
+}

@@ -1,0 +1,19 @@
+---
+tag: ""
+layout: layouts/base
+---
+
+<div class="posts">
+    {%- for page in collections.page | reverse -%}
+        <article data-slug="{{ page.data.title | slug }}">
+            {% include "components/article-header.njk" %}
+        </article>
+    {%- endfor -%}
+    {%- for post in collections.post | reverse -%}
+        <article data-slug="{{ post.data.title | slug }}">
+            {% include "components/article-header.njk" %}
+        </article>
+    {%- endfor -%}
+</div>
+
+{% include "components/footer.njk" %}

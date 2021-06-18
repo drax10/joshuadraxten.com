@@ -1,0 +1,21 @@
+{
+  "name": "ovco.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "fs": "0.0.1-security"
+  },
+  "dependencies": {
+    "clean-css": "^4.2.3",
+    "googleapis": "^67.0.0",
+    "uglify-js": "^3.12.4"
+  }
+}
