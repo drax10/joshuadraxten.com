@@ -1,22 +1,24 @@
 ---
-title: A BF Compliler written in CSS+HTML
+title: A BF Interpreter written in CSS+HTML
 subtitle: a study in masochism
 layout: layouts/post
 tags: post
 date: 2018-11-04
 ---
 
-Ever since it was proved that <a href="https://jsfiddle.net/Camilo/eQyBa/">CSS could simulate rule 110</a> and so it was technically turning complete, I've wanted to actually program something with it. So I spent 3 months working on something only a programmer could love.
+Ever since it was proven that <a href="https://jsfiddle.net/Camilo/eQyBa/">HTML and CSS are technically turing complete</a>, I've wanted to create a program with them.
+
+So I built a project only a programmer could love: builting an interperater for [BF](https://en.wikipedia.org/wiki/Brainfuck), an esoteric programming language with only 8 commands (that I shortened down to 5).
 
 ![Demo of this turing complete css project working](https://raw.githubusercontent.com/JoshuaDraxten/bf-in-css/master/assets/screencap.gif)
 
 ## What's going on?
 
-In a nutshell, the code works by keeping the state and code in input boxes that can be selected using the `:checked` pseudo-selector. Using many different css rules looking at what checkbox/radioboxes are currentlty checked, a label, with its `for` attribute set to the next input to toggle, is positioned in the bottom left of the screen where the mouse is positioned. So whenever someone clicks the label in the bottom left, the state is changed, changing the CSS logic for which label element is shown in the bottom left.
+In a nutshell, it works by storing the state in checkboxes or radio buttons. Based on what is checked, a label element with it's `for` attribute set to the id of the next checkbox to be toggled is positioned below the mouse to queue the next action. Repeatidly clicking in the same spot where the label elements are put causes the program to compute.
 
 ## Removing 3 commands
 
-Typically, BF is ran with 8-bit cells that can hold values up to 255, but to implement adding and subtracting on those cells would require many more clicks and complexity than is unnecessary since you can [prove that 1-bit BF is still Turing complete using reduction](http://samuelhughes.com/boof/). Perhaps, I will have another masochistic streak in the future and update the project to support 8-bit cells. But for now, since the cell size is 1 bit the + and - commands do the exact same thing, so I’ve removed the `-` command.
+Typically, BF is ran with 8-bit cells that can hold values up to 255, but to implement adding and subtracting on those cells would require _way more_ clicks and complexity than is unnecessary since you can [prove that 1-bit BF is still Turing complete using reduction](http://samuelhughes.com/boof/). Perhaps, I will have another masochistic streak in the future and update the project to support 8-bit cells. But for now, since the cell size is 1 bit the + and - commands do the exact same thing, so I’ve removed the `-` command.
 
 I have not implemented the two i/o commands, because clicking a box repeatedly was already user-unfriendly. Besides, if you’re a big enough nerd to be reading this, you should be fine reading your own binary.
 
@@ -24,7 +26,7 @@ I have not implemented the two i/o commands, because clicking a box repeatedly w
 
 **Managing Scope**
 
-The most difficult part of this project was managing different loops. If I encounter a `]` command I may need to go back to it’s corresponding `[` command, but if there is a loop within that loop, it cannot return to any specific `[` symbol.
+The most difficult part of this project was managing different loops. If the program encounters a `]` command it needs to go back to thes corresponding `[` command, not the first one it finds. This is very difficult to solve with only css and html.
 
 To have a useful bracket matching system in CSS, I need to be able to change the position of a bracket element in a flat structure. Doing this with simple sibling selectors is impossible without listing out every possible combination, which in my opinion is cheating.
 

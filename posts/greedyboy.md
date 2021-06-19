@@ -10,7 +10,7 @@ While men's luxury fashion is one of the fastest growing industries, legacy bran
 
 ## Branding + Design
 
-I worked with the founders to define a unique look. Borrowing minimalism from the fashion's typical web athetic I added a larger focus on colors to add energy and youth to the brand.
+I worked with the founders to define a unique look. Borrowing minimalism from the fashion's typical web aesthetic I added a larger focus on colors to add energy and youth to the brand.
 
 ![Greedyboy Article](https://res.cloudinary.com/ovco/image/upload/c_scale,f_auto,w_1060/v1610665983/greedyboy-homepage_yqbprx.png)
 
