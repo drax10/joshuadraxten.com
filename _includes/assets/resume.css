@@ -1,4 +1,4 @@
-@media screen {
+@media screen and (min-width: 8.5in) {
   body {
     background: #f3f3f3;
   }
@@ -87,5 +87,29 @@ header h2 {
     padding: 14px 20px;
     cursor: pointer;
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    padding: 0 16px 0 44px;
+  }
+  .contact-options {
+    display: block;
+    padding-left: 16px;
+  }
+  .contact-options a {
+    display: inline-block;
+    text-align: left;
+    margin-right: 16px;
+    margin-bottom: 4px;
+  }
+  .job-header {
+    display: block;
+    margin: 20px 0 20px -28px;
+  }
+  .content p,
+  .content h3 {
+    margin: 0;
   }
 }

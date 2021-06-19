@@ -29,7 +29,7 @@ input {
     -webkit-print-color-adjust: exact;
   }
 }
-@media screen {
+@media screen and (min-width: 8.5in) {
   .print-canvas {
     background: #fff;
     margin: 40px auto;
