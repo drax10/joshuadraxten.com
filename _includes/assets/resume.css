@@ -1,0 +1,91 @@
+@media screen {
+  body {
+    background: #f3f3f3;
+  }
+}
+.content {
+  line-height: 1.6em;
+  font-size: 14px;
+  padding: 0 40px 0 68px;
+}
+#summary + ul {
+  margin-left: -28px I !important;
+}
+.content ul {
+  padding-left: 12px !important;
+  list-style-type: none;
+  position: relative;
+}
+.content ul li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+.content h2 {
+  margin-left: -28px;
+}
+.contact-options {
+  padding: 12px 0;
+  display: flex;
+  background: #f3f3f3;
+  margin-bottom: -12px;
+}
+.contact-options > a {
+  flex: 1;
+  text-align: center;
+}
+.contact-options > a:not(:hover)::after {
+  content: none;
+}
+.contact-options > a::after {
+  bottom: -12px;
+}
+header .container {
+  height: 160px;
+  min-height: 0 !important;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  font-size: 2.4em;
+  margin-bottom: 8px;
+}
+header h2 {
+  font-size: 1.4em;
+  line-height: 1em;
+}
+.content h2 {
+  margin-bottom: 8px !important;
+}
+.job-header {
+  display: flex;
+  margin-top: -12px;
+  margin-bottom: -24px;
+  margin-left: -28px;
+}
+.job-header h3 {
+  flex: 1;
+}
+.job-header h3 a {
+  font-weight: 500;
+}
+@media (min-width: 1250px) {
+  .print-button {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    padding: 14px 20px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 1250px) {
+  .print-button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 20px;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,56 @@
+---
+layout: layouts/base
+---
+{%- set css %}{% include "assets/resume.css" %}{% endset -%}
+<style>{{ css | cssmin | safe }}</style>
+
+<div class="print-canvas">
+  <div id="resume">
+    <article>
+      <header style="background: #084c61">
+        <div class="container">
+          <div>
+            <h1>{{title}}</h1>
+            <h2>{{subtitle}}</h2>
+          </div>
+        </div>
+      </header>
+    </article>
+    <div class="contact-options">
+      {% for link in links %}
+        <a href="{{ link.href }}" target="_blank" >{{ link.label }}</a>
+      {% endfor %}
+    </div>
+    <div class="content">{{ content | safe }}</div>
+  </div>
+</div>
+
+<script>
+  function addScript(url) {
+    var script = document.createElement("script");
+    script.type = "application/javascript";
+    script.src = url;
+    document.head.appendChild(script);
+  }
+  function downloadPdf() {
+    addScript(
+      "https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"
+    );
+
+    const html2pdfInitialized = setInterval(() => {
+      if (html2pdf) {
+        clearInterval(html2pdfInitialized);
+        html2pdf()
+          .from(document.getElementById("resume"))
+          .save("draxten-joshua-resume.pdf");
+      }
+    }, 200);
+  }
+</script>
+
+<button
+  class="hide-on-print print-button"
+  onclick="downloadPdf();return false;"
+>
+  🖨 Save as PDF
+</button>
