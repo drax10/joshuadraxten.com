@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "clean-css": "^4.2.3",
-    "googleapis": "^67.0.0",
     "uglify-js": "^3.12.4"
   }
 }
