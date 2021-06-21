@@ -15,9 +15,9 @@ links:
 ## Summary
 
 - 6 years of Web Development experience
-- 5 of years working fully remotely. Used to high accountability
+- 5 of years working fully remotely
 - Built/maintained several SaaS products
-- Great at: TypeScript, React, Node.js, PHP and JAMStack
+- Great at: TypeScript, React, JAMStack, Node.js, and PHP
 
 ## Experience
 
