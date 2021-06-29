@@ -10,6 +10,7 @@ links:
     label: 🔗 joshuadraxten.com
   - href: https://github.com/drax10
     label: 💻 github.com/drax10
+header_height: 180px;
 ---
 
 ## Summary
@@ -26,26 +27,26 @@ links:
   <p>Mar 2020 - Present</p>
 </div>
 
-After working 5 years in an intense role with such a varied task list, I got burnt out and wanted to experiment with what things I enjoy working on the most. During this time I've worked on projects like:
+After working in the same job for 4+ years I wanted to explore career specializations and project preferences before taking on another full-time role. During this time I've worked on projects like:
 
 - Building &amp; Designing Bespoke Websites (Jekyll, Eleventy and Wordpress)
 - Building SaaS Apps (AWS, Node.js, React)
 - Data scraping scripts (Python)
 - Machine learning for a real estate start-up (Python and PostgreSQL)
 
-Through this year I've clarified what I like working on. I love projects with a big picture goal to improve peoples lives where I can focus on perfecting the small details to get it there.
-
 <div class="job-header">
   <h3>🦊 Front End Web Developer - <a href="https://genoo.com">Genoo LLC</a></h3>
   <p>Sep 2015 - Mar 2020</p>
 </div>
 
-Genoo is half Marketing Agency half SaaS. I was hired to write HTML for emails and landing pages. In the first month I hacked together a tool to make the email templates quickly. I was then promoted to work on features for the product. In my 4+ years there, I contributed to and lead many projects:
+Genoo is half Marketing Agency half SaaS. I was initially hired to build basic HTML templates, I was promoted within two months to the dev team after automating all my tasks. Due to Genoo being a small company, I wore many hats and impacted all parts of the stack from a development and UX perspective in my 4+ years there. These projects include:
 
 - Design and build new UIs for building Emails, landing pages and more
-- Create and support in-house themes for our clients.
-- Maintaining and extending functionality to the Java Server Pages and PHP Back End - Maintain the health and consistent function of our Linux Email servers
-- Create and maintain our WordPress Plugins
+- Maintaining and extending functionality to the Java Server Pages and PHP Back End
+- Maintain the health and consistent function of our Linux Email servers
+- Create and maintain our WordPress Plugins and Themes
+- Design and build websites for our clients.
+- Create novel marketing tactics that converted 28% better than traditional methods in A/B tests
 - Update our App's Front End to a modern React app
 
 In my role at this job I worked with all levels of Genoo's stack to create a simple, powerful end product that creates marketing results for their users.

@@ -1,6 +1,7 @@
 ---
 layout: layouts/base
 searchTitle: Resume
+header_height: 160px
 ---
 {%- set css %}{% include "assets/resume.css" %}{% endset -%}
 <style>{{ css | cssmin | safe }}</style>
@@ -9,7 +10,7 @@ searchTitle: Resume
   <div id="resume">
     <article>
       <header style="background: #084c61">
-        <div class="container">
+        <div class="container" style="height: {{header_height}}">
           <div>
             <h1>{{title}}</h1>
             <h2>{{subtitle}}</h2>
