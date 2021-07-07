@@ -2,7 +2,7 @@
 permalink: resume/
 layout: layouts/resume
 title: Joshua Draxten
-subtitle: Front End Web Developer
+subtitle: Full Stack Web Developer
 links:
   - href: mailto:joshuadraxten@live.com
     label: 📧 joshuadraxten@live.com
@@ -35,7 +35,7 @@ After working in the same job for 4+ years I wanted to explore career specializa
 - Machine learning for a real estate start-up (Python and PostgreSQL)
 
 <div class="job-header">
-  <h3>🦊 Front End Web Developer - <a href="https://genoo.com">Genoo LLC</a></h3>
+  <h3>🦊 Full Stack Web Developer - <a href="https://genoo.com">Genoo LLC</a></h3>
   <p>Sep 2015 - Mar 2020</p>
 </div>
 
