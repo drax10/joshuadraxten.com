@@ -34,6 +34,7 @@ Since going freelance, I've focused on honing my Front End Development skills
 - Building SaaS Apps (AWS, Node.js, React)
 - Data scraping scripts (Python)
 - Machine learning for a real estate start-up (Python and PostgreSQL)
+- Work on Technical SEO optimization.
 
 <div class="job-header">
   <h3>🦊 Web Developer - <a href="https://genoo.com">Genoo LLC</a></h3>
