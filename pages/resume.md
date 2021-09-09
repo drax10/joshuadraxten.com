@@ -55,8 +55,6 @@ Genoo is half Marketing Agency half SaaS. I was initially hired to build basic H
 
 &nbsp;
 
-&nbsp;
-
 p.s. my resume is generated from markdown, [view source](https://github.com/drax10/joshuadraxten.com/blob/main/pages/resume.md)
 
 <style scoped>
