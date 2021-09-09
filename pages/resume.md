@@ -40,7 +40,7 @@ Since going freelance, I've focused on honing my Front End Development skills
   <p>Sep 2015 - Mar 2020</p>
 </div>
 
-Genoo is half Marketing Agency half SaaS. I was initially hired to build basic HTML templates, I was promoted within two months to the dev team after I built a tool to automate the template building process.
+Genoo is half Marketing Agency half SaaS. I was initially hired to build basic HTML templates, I was promoted within two months to the dev team after I built a tool to automate the template building process. In my nearly 5 years on the dev team there I accomplished:
 
 - Design and build new UIs for building Emails, landing pages and more
 - Maintaining and extending functionality to the Java Server Pages and PHP Back End
