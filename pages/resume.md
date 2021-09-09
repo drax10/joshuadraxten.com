@@ -20,6 +20,7 @@ header_height: 180px;
 - 🛹&nbsp;&nbsp; I attack every problem as a UX problem and I'm not afraid to whip out Sketch/Figma
 - 🌎&nbsp;&nbsp; 5 years experience working fully remotely
 - ⚡️&nbsp;&nbsp; Love of cutting edge technologies like [JAMStack](https://jamstack.org/)
+- 🤓&nbsp;&nbsp; Expert in React.js, Javascript, CSS, HTML5 and PHP
 
 ## Experience
 
